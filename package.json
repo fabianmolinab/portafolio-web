@@ -6,16 +6,22 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "prepare": "husky install",
+    "format": "prettier --write --plugin-search-dir=. .",
+    "lint:css": "stylelint \"src/**/*.{astro,css}\""
   },
   "devDependencies": {
     "@astrojs/react": "0.2.1",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
-    "astro": "1.0.0-beta.65"
-  },
-  "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "astro": "1.0.0-beta.65",
+    "husky": "8",
+    "prettier": "2",
+    "prettier-plugin-astro": "0.1.1",
+    "react": "18",
+    "react-dom": "18",
+    "stylelint": "14.9.1",
+    "stylelint-config-standard": "26.0.0"
   }
 }
