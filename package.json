@@ -16,7 +16,7 @@
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "astro": "1.0.0-beta.65",
-    "husky": "8",
+    "husky": "^8.0.0",
     "prettier": "2",
     "prettier-plugin-astro": "0.1.1",
     "react": "18",

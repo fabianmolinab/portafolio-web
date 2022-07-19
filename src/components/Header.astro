@@ -1,0 +1,51 @@
+---
+---
+
+<header>
+  <nav class='navbar'>
+    <ol class='navbar_list'>
+      <li><a href='/'>Home</a></li>
+      <li><a href='/blog'>Blog</a></li>
+      <li><a href='/about'>About</a></li>
+      <li><a href='/estoicismo'>Estoicismo</a></li>
+    </ol>
+  </nav>
+</header>
+
+<style>
+  @import url('../styles/const.style.css');
+
+  .navbar {
+    margin-top: 2rem;
+    max-width: 80%;
+    height: 4rem;
+  }
+
+  .navbar_list {
+    display: flex;
+    font-weight: 600;
+    font-size: 19px;
+    justify-content: space-around;
+    padding: 5px;
+    list-style: none;
+  }
+
+  a {
+    color: var(--white-color);
+    text-decoration: none;
+  }
+
+  /* Mobile Style*/
+  @media screen and (min-width: 320px) and (max-width: 425px) {
+    .navbar {
+      margin: 20px 15px 5px 15px;
+      max-width: 100%;
+      height: 2rem;
+    }
+
+    .navbar_list {
+      font-size: 17px;
+      justify-content: space-between;
+    }
+  }
+</style>
