@@ -3,36 +3,66 @@
 
 <header>
   <nav class='navbar'>
-    <ol class='navbar_list'>
+    <ul class='navbar_list'>
       <li><a href='/'>Home</a></li>
       <li><a href='/blog'>Blog</a></li>
       <li><a href='/about'>About</a></li>
       <li><a href='/estoicismo'>Estoicismo</a></li>
-    </ol>
+    </ul>
   </nav>
 </header>
+
+<script is:inline>
+  const activePage = window.location.pathname
+  const navLinks = document.querySelectorAll('li a')
+
+  navLinks.forEach(link => {
+    console.log(link)
+    if (link.pathname.includes(`${activePage}`)) {
+      link.classList.add('active')
+    }
+  })
+</script>
 
 <style>
   @import url('../styles/const.style.css');
 
   .navbar {
-    margin-top: 2rem;
+    margin-top: 1.8rem;
     max-width: 80%;
-    height: 4rem;
   }
 
   .navbar_list {
+    align-items: center;
+    color: var(--white-color);
     display: flex;
     font-weight: 600;
     font-size: 19px;
-    justify-content: space-around;
-    padding: 5px;
+    justify-content: space-between;
     list-style: none;
+    height: 2rem;
+  }
+  .navbar_list li {
+    border-radius: 6px;
+    padding: 4px;
   }
 
-  a {
+  .navbar_list li:hover {
+    background-color: var(--orange-color);
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+  .navbar_list li a:hover {
+    color: var(--background-color-dark);
+  }
+
+  a:is(:link, :active, :visited) {
     color: var(--white-color);
     text-decoration: none;
+  }
+
+  a:is(:link, :active, :visited).active {
+    color: var(--orange-color);
   }
 
   /* Mobile Style*/
