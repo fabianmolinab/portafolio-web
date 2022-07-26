@@ -1,9 +1,55 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Button from '../components/Button.astro'
+import Head from '../components/Head.astro'
+import Header from '../components/Header.astro'
 ---
 
+<!DOCTYPE html>
+<html lang='es'>
+  <Head
+    title='Portafolio web profesional de Fabian'
+    description='Este es el portafolio de fabian, bienvenidos'
+  />
 
+  <body>
+    <Header />
+    <main>
+      <div class='presentation_container'>
+        <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina</h></h1>
+        <p class='presentation_p'>
+          Desarrollador de Software & Ingeniero Geologo. Este es mi
+          blog/portafolio donde trato temas de Desarrollo Web y filosofía
+          estoica.
+        </p>
+        <div class='presentation_button'>
+          <Button content='Contactame' />
+        </div>
+      </div>
+    </main>
+    <style>
+      .presentation_container {
+        margin-top: 60px;
+      }
 
-<style>
+      .presentation_title {
+        font-size: 30px;
+        margin: 0 0 15px 0;
+        padding: 0;
+      }
 
-</style>
+      .presentation_title h {
+        color: var(--blue-dark-color);
+      }
+
+      .presentation_p {
+        color: #d8dee9;
+        font-size: 19px;
+        line-height: 1.7rem;
+      }
+
+      .presentation_button {
+        margin-top: 15px;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+:root {
+  /* Size */
+  --size-mobileS: 400px;
+
+  /* Colors */
+  --background-color-dark: #2e3440;
+  --background-color-hard-dark: #242933;
+  --background-color-semi-dark: #4c566a;
+  --white-color: #eceff4;
+  --blue-dark-color: #5e81ac;
+  --blue-light-color: #81a1c1;
+  --blue-color: #88c0d0;
+  --green-light-color: #8fbcbb;
+  --green-color: #a3be8c;
+  --red-color: #bf616a;
+  --orange-color: #d08770;
+  --yellow-color: #ebcb8b;
+  --violet-color: #b48ead;
+
+  /* Fonts */
+  --font-family-regular: 'JetBrains Mono', monospace;
+  --font-size-regular: 20px;
+}

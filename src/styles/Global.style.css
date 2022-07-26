@@ -1,0 +1,21 @@
+@import url('./const.style.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-regular);
+  font-size: var(--font-size-regular);
+  background-color: var(--background-color-hard-dark);
+  color: var(--white-color);
+}
+
+body {
+  margin: 0 auto;
+  max-width: 672px;
+}
