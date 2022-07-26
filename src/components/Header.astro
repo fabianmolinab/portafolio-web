@@ -4,20 +4,20 @@
 <header>
   <nav class='navbar'>
     <ul class='navbar_list'>
-      <li><a href='/'>Home</a></li>
-      <li><a href='/blog'>Blog</a></li>
-      <li><a href='/about'>About</a></li>
-      <li><a href='/estoicismo'>Estoicismo</a></li>
+      <li><a class='active' href='/'>Inicio</a></li>
+      <li><a href='blog'>Blog</a></li>
+      <li><a href='curriculum'>Curriculum</a></li>
+      <li><a href='filosofia'>Filosofia</a></li>
     </ul>
   </nav>
 </header>
 
 <script is:inline>
   const activePage = window.location.pathname
-  const navLinks = document.querySelectorAll('li a')
+  const navLinks = document.querySelectorAll('ul a')
 
   navLinks.forEach(link => {
-    console.log(link)
+    link.classList.remove('active')
     if (link.pathname.includes(`${activePage}`)) {
       link.classList.add('active')
     }
@@ -29,7 +29,7 @@
 
   .navbar {
     margin-top: 1.8rem;
-    max-width: 80%;
+    position: static;
   }
 
   .navbar_list {
@@ -42,16 +42,18 @@
     list-style: none;
     height: 2rem;
   }
+
   .navbar_list li {
     border-radius: 6px;
     padding: 4px;
   }
 
   .navbar_list li:hover {
-    background-color: var(--orange-color);
+    background-color: var(--blue-dark-color);
     border-radius: 6px;
     transition: 0.3s;
   }
+
   .navbar_list li a:hover {
     color: var(--background-color-dark);
   }
@@ -62,7 +64,7 @@
   }
 
   a:is(:link, :active, :visited).active {
-    color: var(--orange-color);
+    color: var(--blue-dark-color);
   }
 
   /* Mobile Style*/
