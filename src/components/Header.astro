@@ -4,7 +4,7 @@
 <header>
   <nav class='navbar'>
     <ul class='navbar_list'>
-      <li><a class='active' href='/'>Inicio</a></li>
+      <li><a href='/'>Inicio</a></li>
       <li><a href='blog'>Blog</a></li>
       <li><a href='curriculum'>Curriculum</a></li>
       <li><a href='filosofia'>Filosofia</a></li>
@@ -18,7 +18,7 @@
 
   navLinks.forEach(link => {
     link.classList.remove('active')
-    if (link.pathname.includes(`${activePage}`)) {
+    if (link.pathname === `${activePage}`) {
       link.classList.add('active')
     }
   })
