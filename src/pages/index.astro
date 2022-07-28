@@ -18,14 +18,28 @@ import Header from '../components/Header.astro'
         <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina</h></h1>
         <p class='presentation_p'>
           Desarrollador de Software & Ingeniero Geologo. Este es mi
-          blog/portafolio donde trato temas de Desarrollo Web y filosofía
-          estoica.
+          blog/portafolio donde trato temas diversos enfocados a Desarrollo Web,
+          Tecnología.
         </p>
-        <div class='presentation_button'>
-          <Button content='Contactame' />
+
+        <div class='presentation_social'>
+          <Button content='Contactame =>' />
+
+          <a
+            class='presentation_social-icon'
+            href='https://github.com/fabianmolinab'
+            ><i class='fi-xnsuxl-github fi-size-xl' style='color:#eceff4;'></i>
+          </a>
+
+          <a
+            class='presentation_social-icon'
+            href='https://www.linkedin.com/in/fabianmolinab/'
+            ><i class='fi-snsuxl-linkedin fi-size-xl' style='color:#eceff4'></i>
+          </a>
         </div>
       </div>
     </main>
+
     <style>
       .presentation_container {
         margin-top: 60px;
@@ -33,7 +47,7 @@ import Header from '../components/Header.astro'
 
       .presentation_title {
         font-size: 30px;
-        margin: 0 0 15px 0;
+        margin: 0 0 20px 0;
         padding: 0;
       }
 
@@ -47,8 +61,12 @@ import Header from '../components/Header.astro'
         line-height: 1.7rem;
       }
 
-      .presentation_button {
-        margin-top: 15px;
+      .presentation_social {
+        margin-top: 20px;
+      }
+
+      .presentation_social-icon {
+        cursor: pointer;
       }
     </style>
   </body>
