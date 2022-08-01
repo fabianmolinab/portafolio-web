@@ -3,91 +3,88 @@
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import Strong from '../components/Strong.astro'
+import Card from '../components/Card.astro'
+import SeccionProyectos from '../components/SeccionProyectos.astro';
 ---
 
 <!DOCTYPE html>
 <html lang='es'>
-  <Head
-    title='Portafolio web profesional de Fabian'
-    description='Este es el portafolio de fabian, bienvenidos'
-  />
 
-  <body>
-    <Header />
-    <main>
-      <div class='presentation_container'>
-        <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina</h></h1>
-        <p class='presentation_p'>
-          Desarrollador de Software & Ingeniero Geologo. Este es mi
-          blog/portafolio donde trato temas diversos enfocados a Desarrollo Web
-          y Tecnología. ¡Bienvenido!
-        </p>
+<Head title='Portafolio web profesional de Fabian' description='Este es el portafolio de fabian, bienvenidos' />
 
-        <div class='presentation_social'>
-          <Strong content='Contactame =>' />
+<body>
+  <Header />
+  <main>
+    <div class='presentation_container'>
+      <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina</h>
+      </h1>
+      <p class='presentation_p'>
+        Desarrollador de Software & Ingeniero Geologo. Este es mi
+        blog/portafolio donde trato temas diversos enfocados a Desarrollo Web
+        y Tecnología. ¡Bienvenido!
+      </p>
 
-          <a
-            class='presentation_social-icon'
-            href='https://github.com/fabianmolinab'
-            target='_blank'
-            ><i class='fa-brands fa-github fa-2x'></i>
-          </a>
+      <div class='presentation_social'>
+        <Strong content='Contactame =>' />
 
-          <a
-            class='presentation_social-icon'
-            href='https://www.linkedin.com/in/fabianmolinab/'
-            target='_blank'
-            ><i class='fa-brands fa-linkedin fa-2x'></i>
-          </a>
-        </div>
+        <a class='presentation_social-icon' href='https://github.com/fabianmolinab' target='_blank'><i
+            class='fa-brands fa-github fa-2x'></i>
+        </a>
+
+        <a class='presentation_social-icon' href='https://www.linkedin.com/in/fabianmolinab/' target='_blank'><i
+            class='fa-brands fa-linkedin fa-2x'></i>
+        </a>
       </div>
-    </main>
-    <style>
-      .presentation_container {
-        margin-top: 60px;
-      }
+    </div>
+  </main>
+</body>
 
-      .presentation_title {
-        font-size: 30px;
-        margin: 0 0 20px 0;
-        padding: 0;
-      }
-
-      .presentation_title h {
-        color: var(--blue-dark-color);
-        cursor: no-drop;
-      }
-
-      .presentation_title h:hover {
-        color: var(--violet-color);
-      }
-
-      .presentation_p {
-        font-size: 19px;
-        line-height: 1.7rem;
-      }
-
-      .presentation_social {
-        display: flex;
-        align-items: center;
-        height: 40px;
-        margin-top: 20px;
-      }
-
-      .presentation_social-icon {
-        cursor: pointer;
-        color: transparent;
-      }
-
-      .fa-brands {
-        color: var(--white-color);
-        margin-right: 10px;
-      }
-
-      .fa-brands:hover {
-        color: var(--violet-color);
-        transition: 0.3s;
-      }
-    </style>
-  </body>
 </html>
+
+<style>
+  .presentation_container {
+    margin-top: calc(91px + 1rem);
+  }
+
+  .presentation_title {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+
+  .presentation_title h {
+    color: var(--blue-dark-color);
+    cursor: no-drop;
+  }
+
+  .presentation_title h:hover {
+    color: var(--violet-color);
+  }
+
+  .presentation_p {
+    font-size: 19px;
+    line-height: 1.7rem;
+  }
+
+  .presentation_social {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-top: 20px;
+  }
+
+  .presentation_social-icon {
+    cursor: pointer;
+    color: transparent;
+  }
+
+  .fa-brands {
+    color: var(--white-color);
+    margin-right: 10px;
+  }
+
+  .fa-brands:hover {
+    color: var(--violet-color);
+    transition: 0.3s;
+  }
+</style>
