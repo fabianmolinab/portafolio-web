@@ -3,9 +3,7 @@
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import Strong from '../components/Strong.astro'
-import Card from '../components/Card.astro'
 import SeccionProyectos from '../components/SeccionProyectos.astro'
-
 ---
 
 <!DOCTYPE html>
@@ -18,7 +16,7 @@ import SeccionProyectos from '../components/SeccionProyectos.astro'
   <main>
 
     <div class='presentation_container'>
-      <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina</h>
+      <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina 🇨🇴</h>
       </h1>
       <p class='presentation_p'>
         Desarrollador de Software & Ingeniero Geologo. Este es mi
@@ -27,7 +25,7 @@ import SeccionProyectos from '../components/SeccionProyectos.astro'
       </p>
 
       <div class='presentation_social'>
-        <Strong content='Contactame =>' />
+        <Strong content='Contactame =>'/>
         <a class='presentation_social-icon' href='https://github.com/fabianmolinab' target='_blank'><i
             class='fa-brands fa-github fa-2x'></i>
         </a>
@@ -48,8 +46,9 @@ import SeccionProyectos from '../components/SeccionProyectos.astro'
   }
 
  .presentation_title {
-    font-size: 30px;
-    margin: 0 0 20px 0;
+    font-size: var(--font-size-title);
+    font-weight: 600;
+    margin: 0 0 20px;
     padding: 0;
   }
 
@@ -60,11 +59,6 @@ import SeccionProyectos from '../components/SeccionProyectos.astro'
 
   .presentation_title h:hover {
     color: var(--violet-color);
-  }
-
-  .presentation_p {
-    font-size: 19px;
-    line-height: 1.7rem;
   }
 
   .presentation_social {

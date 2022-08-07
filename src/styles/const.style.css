@@ -18,6 +18,8 @@
   --violet-color: #b48ead;
 
   /* Fonts */
-  --font-family-regular: 'JetBrains Mono', monospace;
-  --font-size-regular: 20px;
+  --font-family-regular: 'IBM Plex Mono', monospace;
+  --font-size-title: 1.5rem;
+  --font-size-regular: 1.1rem;
+  --font--weight-regular: 300;
 }
