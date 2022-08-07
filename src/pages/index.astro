@@ -4,7 +4,8 @@ import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import Strong from '../components/Strong.astro'
 import Card from '../components/Card.astro'
-import SeccionProyectos from '../components/SeccionProyectos.astro';
+import SeccionProyectos from '../components/SeccionProyectos.astro'
+
 ---
 
 <!DOCTYPE html>
@@ -15,6 +16,7 @@ import SeccionProyectos from '../components/SeccionProyectos.astro';
 <body>
   <Header />
   <main>
+
     <div class='presentation_container'>
       <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina</h>
       </h1>
@@ -26,15 +28,14 @@ import SeccionProyectos from '../components/SeccionProyectos.astro';
 
       <div class='presentation_social'>
         <Strong content='Contactame =>' />
-
         <a class='presentation_social-icon' href='https://github.com/fabianmolinab' target='_blank'><i
             class='fa-brands fa-github fa-2x'></i>
         </a>
-
         <a class='presentation_social-icon' href='https://www.linkedin.com/in/fabianmolinab/' target='_blank'><i
             class='fa-brands fa-linkedin fa-2x'></i>
         </a>
       </div>
+      <SeccionProyectos />
     </div>
   </main>
 </body>
@@ -46,7 +47,7 @@ import SeccionProyectos from '../components/SeccionProyectos.astro';
     margin-top: calc(91px + 1rem);
   }
 
-  .presentation_title {
+ .presentation_title {
     font-size: 30px;
     margin: 0 0 20px 0;
     padding: 0;
