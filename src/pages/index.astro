@@ -20,8 +20,7 @@ import SeccionProyectos from '../components/SeccionProyectos.astro'
       </h1>
       <p class='presentation_p'>
         Desarrollador de Software & Ingeniero Geologo. Este es mi
-        blog/portafolio donde trato temas diversos enfocados a Desarrollo Web
-        y Tecnología. ¡Bienvenido!
+        blog/portafolio donde trato temas diversos enfocados a Desarrollo Web y Tecnología. ¡Bienvenido!
       </p>
 
       <div class='presentation_social'>
@@ -82,4 +81,21 @@ import SeccionProyectos from '../components/SeccionProyectos.astro'
     color: var(--violet-color);
     transition: 0.3s;
   }
+
+@media screen and (min-width: 370px) and (max-width: 500px) { 
+  
+  
+  .presentation_container {
+    margin-top: calc(41px + 3rem);
+    padding: 0 20px;
+  }
+
+  .presentation_title {
+    font-size: 1.2rem;
+  }
+
+  .presentation_p {
+    font-size: 1rem;
+  }
+}
 </style>

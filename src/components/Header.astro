@@ -5,9 +5,9 @@
   <nav class='navbar'>
     <ul class='navbar_list'>
       <li><a href='/'>Inicio</a></li>
-      <li><a href='blog'>Blog</a></li>
-      <li><a href='sobremi'>Mas sobre mí</a></li>
-      <li><a href='filosofia'>Filosofia</a></li>
+      <li><a href='/blog'>Blog</a></li>
+      <li><a href='/contacto'>Contacto</a></li>
+      <li><a href='/filosofia'>Filosofia</a></li>
     </ul>
   </nav>
 </header>
@@ -81,16 +81,28 @@
   }
 
   /* Mobile Style*/
-  @media screen and (min-width: 320px) and (max-width: 425px) {
+  @media screen and (min-width: 370px) and (max-width: 500px) {
+    .header {
+      height: 40px;
+    }
+
     .navbar {
-      margin: 20px 15px 5px 15px;
+      display: block;
       max-width: 100%;
-      height: 2rem;
+      padding: 20px 10px;
+      height: 40px;
     }
 
     .navbar_list {
-      font-size: 17px;
+      font-size: 1rem;
       justify-content: space-between;
     }
   }
+  
+ @media screen and (min-width: 300px) and (max-width: 370px){
+   .navbar_list {
+     font-size: 16px;
+   }
+ }
+
 </style>
