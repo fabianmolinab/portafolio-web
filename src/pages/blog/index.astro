@@ -1,6 +1,6 @@
 ---
 import Head from '../../components/Head.astro'
-import Header from '../../components/Header.astro'
+import Header from '../../components/molecules/Header.astro'
 ---
 
 <!DOCTYPE html>
@@ -11,6 +11,6 @@ import Header from '../../components/Header.astro'
   />
 
   <body>
-    <Header />
+    <Header client:load/>
   </body>
 </html>
