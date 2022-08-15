@@ -1,22 +1,21 @@
 ---
 interface Props {
   urlImg: string
+  altImg: string
   title: string
   urlLink: string
   urlGit: string
-  linkName: string
+  urlName: string
   description: string
 }
 
-
-const { urlImg, title, urlLink, urlGit, linkName, description } =
+const {urlImg, altImg, title, urlLink, urlGit, urlName, description} =
   Astro.props as Props
-
 ---
 
 <div class='card'>
   <!-- Imagen-->
-  <img src={urlImg} class='card_img' />
+  <img src={urlImg} alt={altImg} class='card_img' />
 
   <!-- Title  -->
   <div class='card_title'>
@@ -25,12 +24,23 @@ const { urlImg, title, urlLink, urlGit, linkName, description } =
 
   <!-- Descripción -->
   <p class='card_description'>{description}</p>
-  <a href={urlLink}>{linkName}</a>
-  <a href={urlGit}>Ver el codigo <i class='fa-brands fa-github-alt'></i></a>
+  <a href={urlLink} class='card_name'>{urlName}</a>
+  <a href={urlGit} class='card_git'
+    >Ver el codigo <i class='fa-brands fa-github-alt'></i>
+  </a>
 </div>
+
 <style>
   .card {
     border-radius: 6px;
     background-color: var(--background-color-dark);
+    overflow: hidden;
+    box-shadow: rgba(15, 17, 21, 0.25) 0px 4px 6px,
+      rgba(15, 17, 21, 0.1) 0px 5px 7px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 400ms ease-in-out 0s,
+      background-color 400ms ease-in-out 0s;
   }
 </style>

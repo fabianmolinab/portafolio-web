@@ -3,98 +3,103 @@
 import Head from '../components/Head.astro'
 import Strong from '../components/atoms/Strong.astro'
 import SeccionProyectos from '../components/organisms/SeccionProyectos.astro'
-import Header from '../components/molecules/Header.astro';
-import Paragraph from '../components/atoms/Paragraph.astro';
-
+import Header from '../components/molecules/Header.astro'
+import Paragraph from '../components/atoms/Paragraph.astro'
 ---
 
 <!DOCTYPE html>
 <html lang='es'>
+  <Head
+    title='Portafolio web profesional de Fabian'
+    description='Este es el portafolio de fabian, bienvenidos'
+  />
 
-<Head title='Portafolio web profesional de Fabian' description='Este es el portafolio de fabian, bienvenidos' />
+  <body>
+    <Header client:load />
+    <main>
+      <div class='presentation_container'>
+        <h1 class='presentation_title'>
+          Hola 🤘, soy <h>Fabian Molina 🇨🇴</h>
+        </h1>
+        <Paragraph>
+          <p>
+            Desarrollador de Software & Ingeniero Geologo. Este es mi
+            blog/portafolio donde trato temas diversos enfocados a Desarrollo
+            Web y Tecnología. ¡Bienvenido!
+          </p>
+        </Paragraph>
 
-<body>
-  <Header client:load/>
-  <main>
-  
-    <div class='presentation_container'>
-      <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina 🇨🇴</h>
-      </h1>
-      <Paragraph>
-        <p>
-          Desarrollador de Software & Ingeniero Geologo. Este es mi blog/portafolio donde trato temas diversos enfocados a Desarrollo Web y Tecnología. ¡Bienvenido! 
-        </p>
-      </Paragraph>
-
-      <div class='presentation_social'>
-        <Strong content="Contactame =>"/>
-        <a class='presentation_social-icon' href='https://github.com/fabianmolinab' target='_blank'><i
-            class='fa-brands fa-github fa-2x'></i>
-        </a>
-        <a class='presentation_social-icon' href='https://www.linkedin.com/in/fabianmolinab/' target='_blank'><i
-            class='fa-brands fa-linkedin fa-2x'></i>
-        </a>
+        <div class='presentation_social'>
+          <Strong content='Contactame =>' />
+          <a
+            class='presentation_social-icon'
+            href='https://github.com/fabianmolinab'
+            target='_blank'
+            ><i class='fa-brands fa-github fa-2x'></i>
+          </a>
+          <a
+            class='presentation_social-icon'
+            href='https://www.linkedin.com/in/fabianmolinab/'
+            target='_blank'
+            ><i class='fa-brands fa-linkedin fa-2x'></i>
+          </a>
+        </div>
+        <SeccionProyectos />
       </div>
-      <SeccionProyectos />
-    </div>
-  </main>
-</body>
+    </main>
+    <style>
+      .presentation_container {
+        margin-top: calc(91px + 1rem);
+      }
 
+      .presentation_title {
+        font-size: var(--font-size-title);
+        font-weight: 600;
+        margin: 0 0 20px;
+        padding: 0;
+      }
+
+      .presentation_title h {
+        color: var(--blue-dark-color);
+        cursor: no-drop;
+      }
+
+      .presentation_title h:hover {
+        color: var(--violet-color);
+      }
+
+      .presentation_social {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        margin-top: 20px;
+      }
+
+      .presentation_social-icon {
+        cursor: pointer;
+        color: transparent;
+      }
+
+      .fa-brands {
+        color: var(--white-color);
+        margin-right: 10px;
+      }
+
+      .fa-brands:hover {
+        color: var(--violet-color);
+        transition: 0.3s;
+      }
+
+      @media screen and (min-width: 370px) and (max-width: 500px) {
+        .presentation_container {
+          margin-top: calc(41px + 3rem);
+          padding: 0 20px;
+        }
+
+        .presentation_title {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </body>
 </html>
-
-<style>
-  .presentation_container {
-    margin-top: calc(91px + 1rem);
-  }
-
- .presentation_title {
-    font-size: var(--font-size-title);
-    font-weight: 600;
-    margin: 0 0 20px;
-    padding: 0;
-  }
-
-  .presentation_title h {
-    color: var(--blue-dark-color);
-    cursor: no-drop;
-  }
-
-  .presentation_title h:hover {
-    color: var(--violet-color);
-  }
-
-  .presentation_social {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    margin-top: 20px;
-  }
-
-  .presentation_social-icon {
-    cursor: pointer;
-    color: transparent;
-  }
-
-  .fa-brands {
-    color: var(--white-color);
-    margin-right: 10px;
-  }
-
-  .fa-brands:hover {
-    color: var(--violet-color);
-    transition: 0.3s;
-  }
-
-@media screen and (min-width: 370px) and (max-width: 500px) { 
-  
-  .presentation_container {
-    margin-top: calc(41px + 3rem);
-    padding: 0 20px;
-  }
-
-  .presentation_title {
-    font-size: 1.2rem;
-  }
-
-}
-</style>

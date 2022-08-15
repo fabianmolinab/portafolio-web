@@ -21,11 +21,16 @@ body {
 }
 
 p {
-  font-size: var(--font-size-regular); 
+  font-size: var(--font-size-regular);
   font-weight: var(--font-weight-regular);
   line-height: 1.8rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0px 0px 20px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px 0px 20px;
 }
