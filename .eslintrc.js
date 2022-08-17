@@ -26,9 +26,19 @@ module.exports = {
         // Enable recommended rules
         'astro/no-conflict-set-directives': 'error',
         'astro/no-unused-define-vars-in-style': 'error',
-
+        'no-console': 'warn',
         // override/add rules settings here, such as:
         'astro/no-set-html-directive': 'error',
+        'sort-imports': [
+          'error',
+          {
+            ignoreCase: true,
+            ignoreDeclarationSort: true,
+            ignoreMemberSort: false,
+            memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+            allowSeparatedGroups: false,
+          },
+        ],
       },
     },
     {
@@ -45,8 +55,6 @@ module.exports = {
       rules: {
         // override/add rules settings here, such as:
         'no-unused-vars': 'error',
-        quotes: ['error', 'double'],
-        'no-console': 'warn',
 
         // If you are using "prettier/prettier" rule,
         // you don't need to format inside <script> as it will be formatted as a `.astro` file.
