@@ -12,25 +12,30 @@ export interface Props {
 }
 
 const {urlImg, altImg, title, urlLink, urlGit, urlName, description} =
-  Astro.props
-console.log(urlLink)
+  Astro.props as Props
 ---
 
 <div class='card'>
   <!-- Imagen-->
-
-  <Image class='card_img' src={urlImg} width={600} height={360} alt={altImg} />
+  <Image
+    class='card_img'
+    src={urlImg}
+    width={600}
+    height={360}
+    alt={altImg}
+    format='png'
+  />
 
   <div class='card_seccion'>
     <!-- Title  -->
-    <div class='card_title'>
+    <div class='card_seccion-title'>
       <h3>{title}</h3>
     </div>
     <!-- Descripción -->
-    <p class='card_description'>{description}</p>
-    <a href={urlLink} class='card_name'>{urlName}</a>
-    <a href={urlGit} class='card_git'
-      >Ver el codigo <i class='fa-brands fa-github-alt'></i>
+    <p class='card_seccion-description'>{description}</p>
+    <a href={urlLink} class='card_seccion-name'>{urlName}</a>
+    <a href={urlGit} class='card_seccion-git'
+      >| Ver el codigo <i class='fa-brands fa-github-alt'></i>
     </a>
   </div>
 </div>
@@ -51,11 +56,30 @@ console.log(urlLink)
   }
 
   .card_img {
+    width: 100%;
     border-radius: 6px;
   }
 
   .card_seccion {
     width: 100%;
     padding: 20px;
+  }
+
+  .card_seccion-title {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+
+  .card_seccion-description {
+    font-size: 0.9em;
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .card_seccion-name,
+  .card_seccion-git {
+    color: var(--blue-light-color);
+    font-size: 0.9em;
+    text-decoration: none;
   }
 </style>
