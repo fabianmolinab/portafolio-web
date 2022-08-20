@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "prepare": "husky install",
     "format": "eslint --ext .js,.astro src",
-    "prettier": "prettier -w --plugin-search-dir=. ."
+    "prettier": "prettier -w --plugin-search-dir=. .",
+    "lint:style": "stylelint ./src/**/*.css ./src/**/*.astro --fix"
   },
   "devDependencies": {
     "@astrojs/image": "0.3.4",
@@ -21,9 +22,19 @@
     "eslint": "8.21.0",
     "eslint-plugin-astro": "0.16.0",
     "husky": "8.0.0",
+    "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "prettier-plugin-astro": "0.5.0",
     "react": "18",
-    "react-dom": "18"
+    "react-dom": "18",
+    "stylelint": "14.10.0",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-standard": "27.0.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.src": "prettier --write",
+    "*.astro": "stylelint --fix"
   }
 }
