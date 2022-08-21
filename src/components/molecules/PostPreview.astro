@@ -1,0 +1,12 @@
+---
+interface Props {
+  post: any
+}
+
+const {post} = Astro.props as Props
+const {frontmatter} = post
+---
+
+<div>
+  <h4>{frontmatter.title}</h4>
+</div>

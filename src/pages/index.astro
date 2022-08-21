@@ -2,9 +2,10 @@
 // Componentes
 import Head from '../components/Head.astro'
 import Strong from '../components/atoms/Strong.astro'
-import SeccionProyectos from '../components/organisms/SeccionProyectos.astro'
+import Proyectos from '../components/organisms/Proyectos.astro'
 import Header from '../components/molecules/Header.astro'
 import Paragraph from '../components/atoms/Paragraph.astro'
+import MejoresBlogs from '../components/organisms/MejoresBlogs.astro'
 ---
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ import Paragraph from '../components/atoms/Paragraph.astro'
     <main>
       <div class='presentation_container'>
         <h1 class='presentation_title'>
-          Hola 🤘, soy <h>Fabian Molina 🇨🇴</h>
+          Hola 🤙 soy <h>Fabian Molina 🇨🇴</h>
         </h1>
         <Paragraph>
           <p>
@@ -44,7 +45,8 @@ import Paragraph from '../components/atoms/Paragraph.astro'
             ><i class='fa-brands fa-linkedin fa-2x'></i>
           </a>
         </div>
-        <SeccionProyectos />
+        <Proyectos />
+        <MejoresBlogs />
       </div>
     </main>
     <style>

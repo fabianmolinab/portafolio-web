@@ -1,0 +1,16 @@
+---
+import PostPreview from '../molecules/PostPreview.astro'
+
+const posts = await Astro.glob('../../pages/blog/posts/*.md')
+---
+
+<h2>Mejores Posts</h2>
+<section>
+  {posts.map((post) => <PostPreview post={post} />)}
+</section>
+
+<style>
+  h2 {
+    margin-bottom: 55px;
+  }
+</style>
