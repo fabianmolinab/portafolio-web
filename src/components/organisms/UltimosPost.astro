@@ -1,0 +1,22 @@
+---
+import PostPreview from '../molecules/PostPreview.astro'
+
+const postsBlog = await Astro.glob('../../pages/blog/posts/*.md')
+
+if (postsBlog.length >= 5) {
+  postsBlog.splice(4, 1)
+}
+---
+
+<h2>Ultimos Posts</h2>
+<section>
+  {postsBlog.map((post) => <PostPreview post={post} />)}
+</section>
+
+<style>
+  h2 {
+    margin-bottom: 55px;
+  }
+  section {
+  }
+</style>
