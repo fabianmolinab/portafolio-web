@@ -8,15 +8,28 @@ if (postsBlog.length >= 5) {
 }
 ---
 
-<h2>Ultimos Posts</h2>
+<div class='post_title'>
+  <h2>Ultimos Posts</h2>
+  <a href='/blog'>Ver todos</a>
+</div>
+
 <section>
   {postsBlog.map((post) => <PostPreview post={post} />)}
 </section>
 
 <style>
-  h2 {
-    margin-bottom: 55px;
+  .post_title {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
   }
-  section {
+  .post_title h2 {
+    margin: 0;
+  }
+  .post_title a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 0.9em;
   }
 </style>

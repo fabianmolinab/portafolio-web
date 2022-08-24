@@ -1,4 +1,6 @@
 ---
+import {Image} from '@astrojs/image/components'
+
 interface Props {
   post: any
 }
@@ -7,6 +9,66 @@ const {post} = Astro.props as Props
 const {frontmatter} = post
 ---
 
-<div>
-  <h4>{frontmatter.title}</h4>
+<div class='postpreview_card'>
+  <!--Imagen -->
+  <Image
+    src='https://images.unsplash.com/photo-1661115111372-8360e73141fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'
+    class='imagen'
+    format='png'
+    width={180}
+    height={130}
+    alt='alt'
+  />
+
+  <div class='postpreview_card-body'>
+    <!--Minutos de lectura-->
+    <p class='postpreview_card-body-read'>5 min de lectura</p>
+    <!--Title -->
+    <h4 class='postpreview_card-body-title'>{frontmatter.title}</h4>
+
+    <!--Fecha-->
+    <p class='postpreview_card-body-date'>09 de Agosto del 2022</p>
+  </div>
 </div>
+
+<style>
+  .postpreview_card {
+    background-color: var(--background-color-dark);
+    border-radius: 10px;
+    box-shadow: rgba(15, 17, 21, 0.25) 0px 4px 6px,
+      rgba(15, 17, 21, 0.1) 0px 5px 7px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: box-shadow 400ms ease-in-out 0s,
+      background-color 400ms ease-in-out 0s;
+    overflow: hidden;
+    height: 160px;
+  }
+
+  .imagen {
+    border-radius: 10px;
+    order: 1;
+  }
+
+  .postpreview_card-body {
+    display: flex;
+    margin-right: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .postpreview_card-body-read {
+    color: var(--green-light-color);
+    font-size: 0.8em;
+  }
+
+  .postpreview_card-body-title {
+    font-size: 1em;
+    line-height: 1.4rem;
+  }
+
+  .postpreview_card-body-date {
+    font-size: 0.8em;
+  }
+</style>
