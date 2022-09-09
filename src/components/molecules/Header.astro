@@ -1,13 +1,13 @@
 ---
 ---
 
-<header>
+<header class='header'>
   <nav class='navbar'>
     <ul class='navbar_list'>
-      <li><a class='active' href='/'>Inicio</a></li>
-      <li><a href='blog'>Blog</a></li>
-      <li><a href='curriculum'>Curriculum</a></li>
-      <li><a href='filosofia'>Filosofia</a></li>
+      <li><a href='/'>Inicio</a></li>
+      <li><a href='/blog'>Blog</a></li>
+      <li><a href='/contacto'>Contacto</a></li>
+      <li><a href='/filosofia'>Filosofia</a></li>
     </ul>
   </nav>
 </header>
@@ -16,20 +16,33 @@
   const activePage = window.location.pathname
   const navLinks = document.querySelectorAll('ul a')
 
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     link.classList.remove('active')
-    if (link.pathname.includes(`${activePage}`)) {
+    if (link.pathname === `${activePage}`) {
       link.classList.add('active')
     }
   })
 </script>
 
 <style>
-  @import url('../styles/const.style.css');
+  @import url('../../styles/const.style.css');
+
+  .header {
+    font-weight: 600;
+    position: fixed;
+    height: 91px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 102;
+    backdrop-filter: saturate(120%) blur(20px);
+  }
 
   .navbar {
-    margin-top: 1.8rem;
-    position: static;
+    padding: 30px 10px;
+    margin: 0 auto;
+    width: 672px;
   }
 
   .navbar_list {
@@ -68,16 +81,27 @@
   }
 
   /* Mobile Style*/
-  @media screen and (min-width: 320px) and (max-width: 425px) {
+  @media screen and (min-width: 370px) and (max-width: 500px) {
+    .header {
+      height: 40px;
+    }
+
     .navbar {
-      margin: 20px 15px 5px 15px;
+      display: block;
       max-width: 100%;
-      height: 2rem;
+      padding: 20px 10px;
+      height: 40px;
     }
 
     .navbar_list {
-      font-size: 17px;
+      font-size: 1rem;
       justify-content: space-between;
+    }
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 370px) {
+    .navbar_list {
+      font-size: 16px;
     }
   }
 </style>

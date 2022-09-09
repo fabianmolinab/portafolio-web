@@ -1,0 +1,23 @@
+---
+// Component the paragraph normal
+---
+
+<div class='paragraph'>
+  <slot />
+</div>
+
+<style>
+  @import url('../../styles/const.style.css');
+
+  .paragraph {
+
+    font-size: 1em;
+    line-height: 1.8rem;
+  }
+
+  @media screen and (min-width: 370px) and (max-width: 500px) {
+    .paragraph {
+      font-size: 1rem;
+    }
+  }
+</style>

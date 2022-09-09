@@ -1,7 +1,15 @@
 ---
-import Button from '../components/Button.astro'
+// Componentes
 import Head from '../components/Head.astro'
-import Header from '../components/Header.astro'
+import Strong from '../components/atoms/Strong.astro'
+import Paragraph from '../components/atoms/Paragraph.astro'
+
+//Seccions
+import Header from '../components/molecules/Header.astro'
+import Proyectos from '../components/organisms/Proyectos.astro'
+import UltimosPost from '../components/organisms/UltimosPost.astro'
+import Footer from '../components/organisms/Footer.astro'
+
 ---
 
 <!DOCTYPE html>
@@ -12,43 +20,92 @@ import Header from '../components/Header.astro'
   />
 
   <body>
-    <Header />
+    <Header client:load />
     <main>
       <div class='presentation_container'>
-        <h1 class='presentation_title'>Hola 🤘, soy <h>Fabian Molina</h></h1>
-        <p class='presentation_p'>
-          Desarrollador de Software & Ingeniero Geologo. Este es mi
-          blog/portafolio donde trato temas de Desarrollo Web y filosofía
-          estoica.
-        </p>
-        <div class='presentation_button'>
-          <Button content='Contactame' />
+        <h1 class='presentation_title'>
+          Hola 🤙 soy <h>Fabian Molina 🇨🇴</h>
+        </h1>
+        <Paragraph>
+          <p>
+            Desarrollador de Software & Ingeniero Geologo. Este es mi
+            blog/portafolio donde trato temas diversos enfocados a Desarrollo
+            Web y Tecnología. ¡Bienvenido!
+          </p>
+        </Paragraph>
+
+        <div class='presentation_social'>
+          <Strong content='Contactame =>' />
+          <a
+            class='presentation_social-icon'
+            href='https://www.github.com/fabianmolinab'
+            target='_blank'
+            ><i class='fa-brands fa-github fa-2x'></i>
+          </a>
+          <a
+            class='presentation_social-icon'
+            href='https://www.linkedin.com/in/fabianmolinab/'
+            target='_blank'
+            ><i class='fa-brands fa-linkedin fa-2x'></i>
+          </a>
         </div>
+        <Proyectos />
+        <UltimosPost />
+        <Footer/>
       </div>
     </main>
     <style>
       .presentation_container {
-        margin-top: 60px;
+        margin-top: calc(91px + 1rem);
       }
 
       .presentation_title {
-        font-size: 30px;
-        margin: 0 0 15px 0;
+        font-size: var(--font-size-title);
+        font-weight: 600;
+        margin: 0 0 20px;
         padding: 0;
       }
 
       .presentation_title h {
         color: var(--blue-dark-color);
+        cursor: no-drop;
       }
 
-      .presentation_p {
-        color: #d8dee9;
-        font-size: 19px;
-        line-height: 1.7rem;
+      .presentation_title h:hover {
+        color: var(--violet-color);
       }
 
-      .presentation_button {
-        margin-top: 15px;
+      .presentation_social {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        margin-top: 20px;
+      }
+
+      .presentation_social-icon {
+        cursor: pointer;
+        color: transparent;
+      }
+
+      .fa-brands {
+        color: var(--white-color);
+        margin-right: 10px;
+      }
+
+      .fa-brands:hover {
+        color: var(--violet-color);
+        transition: 0.3s;
+      }
+
+      @media screen and (min-width: 370px) and (max-width: 500px) {
+        .presentation_container {
+          margin-top: calc(41px + 3rem);
+          padding: 0 20px;
+        }
+
+        .presentation_title {
+          font-size: 1.2rem;
+        }
       }
     </style>
   </body>
