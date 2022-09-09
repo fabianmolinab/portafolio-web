@@ -1,0 +1,57 @@
+---
+
+---
+<footer in="">
+  <hr/>
+  <div class="footer_grid">
+    <a href="/">Home</a> 
+    <a href="/blog">Blog</a> 
+    <a href="/contacto">Contacto</a>
+    <a href="/filosofia" >Filosofía</a>
+    <a href="https://www.github.com/fabianmolinab" target="_blank">Github</a>
+    <a href="https://www.linkedin.com/in/fabianmolinab/" target="_blank">Linkedin</a>
+    <a href="https://twitter.com/FabianMolinaB" target="_blank">Twitter</a>
+    <a href="https://medium.com/@FabianMolinaB" target="_blank">Medium</a>
+  </div>
+  <div class="footer_madein">
+    <p>Hecho con 💖 desde 🇨🇴 </p>
+  </div>
+</footer>
+
+<style>
+
+  hr {
+    color: var(--background-color-semi-dark);
+  }
+  .footer_grid {
+    display: grid;
+    font-size: 18px;
+    row-gap: 20px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+  }
+  .footer_grid a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-color);
+  }
+  .footer_grid a:hover {
+    color: var(--green-light-color);
+    font-weight: 500;
+  }
+  .footer_grid a:nth-child(2) {
+    grid-row-start: 2;
+  }
+  .footer_grid a:nth-child(3) {
+    grid-row-start: 3;
+  }
+  .footer_grid a:nth-child(4) {
+    grid-row-start: 4;
+  }
+  .footer_madein {
+    font-size: 18px;
+    margin: 40px 0;
+    text-align: center;
+  }
+</style>

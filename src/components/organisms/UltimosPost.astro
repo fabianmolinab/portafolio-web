@@ -13,7 +13,7 @@ if (postsBlog.length >= 5) {
   <a href='/blog'>Ver todos</a>
 </div>
 
-<section>
+<section class="post_seccion">
   {postsBlog.map((post) => <PostPreview post={post} />)}
 </section>
 
@@ -31,5 +31,8 @@ if (postsBlog.length >= 5) {
     text-decoration: none;
     color: var(--white-color);
     font-size: 0.9em;
+  }
+  .post_seccion {
+    margin-bottom: 75px;
   }
 </style>
