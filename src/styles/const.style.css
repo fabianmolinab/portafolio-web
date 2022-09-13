@@ -1,6 +1,6 @@
 :root {
   /* Size */
-  --size-mobileS: 400px;
+  --size-mobile-s: 320px;
 
   /* Colors */
   --background-color-dark: #2e3440;
@@ -23,4 +23,5 @@
   --font-size-regular: 20px;
   --font-weight-title: 600;
   --font-weight-regular: 400;
+  --font-size-regular-mobile: 16px;
 }
