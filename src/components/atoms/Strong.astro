@@ -6,7 +6,7 @@ interface Props {
 const {content} = Astro.props as Props
 ---
 
-<div>
+<div class='container_strong'>
   <a href='https://www.linkedin.com/in/fabianmolinab/' target='_blank'
     ><strong class='strong'>{content}</strong>
   </a>
@@ -35,9 +35,10 @@ const {content} = Astro.props as Props
     transition: 0.3s;
   }
 
-  @media screen and (min-width: 370px) and (max-width: 500px) {
+  @media screen and (min-width: 360px) and (max-width: 500px) {
     .strong {
-      font-size: 1rem;
+      font-size: 18px;
+      padding: 5px 9px;
     }
   }
 </style>

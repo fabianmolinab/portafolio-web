@@ -9,7 +9,6 @@ import Header from '../components/molecules/Header.astro'
 import Proyectos from '../components/organisms/Proyectos.astro'
 import UltimosPost from '../components/organisms/UltimosPost.astro'
 import Footer from '../components/organisms/Footer.astro'
-
 ---
 
 <!DOCTYPE html>
@@ -35,23 +34,25 @@ import Footer from '../components/organisms/Footer.astro'
         </Paragraph>
 
         <div class='presentation_social'>
-          <Strong content='Contactame =>' />
-          <a
-            class='presentation_social-icon'
-            href='https://www.github.com/fabianmolinab'
-            target='_blank'
-            ><i class='fa-brands fa-github fa-2x'></i>
-          </a>
-          <a
-            class='presentation_social-icon'
-            href='https://www.linkedin.com/in/fabianmolinab/'
-            target='_blank'
-            ><i class='fa-brands fa-linkedin fa-2x'></i>
-          </a>
+          <Strong content='Contactame' />
+          <div class='presentation_social-container-icon'>
+            <a
+              class='presentation_social-icon'
+              href='https://www.github.com/fabianmolinab'
+              target='_blank'
+              ><i class='fa-brands fa-github fa-2x'></i>
+            </a>
+            <a
+              class='presentation_social-icon'
+              href='https://www.linkedin.com/in/fabianmolinab/'
+              target='_blank'
+              ><i class='fa-brands fa-linkedin fa-2x'></i>
+            </a>
+          </div>
         </div>
         <Proyectos />
         <UltimosPost />
-        <Footer client:visible/>
+        <Footer client:visible />
       </div>
     </main>
     <style>
@@ -105,7 +106,14 @@ import Footer from '../components/organisms/Footer.astro'
 
         .presentation_title {
           font-size: var(--font-size-title-mobile);
-          margin-bottom: 10px; 
+          margin-bottom: 10px;
+        }
+        .presentation_social {
+          display: flex;
+          flex-direction: column;
+        }
+        .presentation_social-container-icon {
+          margin-top: 20px;
         }
       }
     </style>
