@@ -97,14 +97,15 @@ import Footer from '../components/organisms/Footer.astro'
         transition: 0.3s;
       }
 
-      @media screen and (min-width: 370px) and (max-width: 500px) {
+      @media screen and (min-width: 360px) and (max-width: 500px) {
         .presentation_container {
-          margin-top: calc(41px + 3rem);
+          margin-top: calc(41px + 2rem);
           padding: 0 20px;
         }
 
         .presentation_title {
-          font-size: 1.2rem;
+          font-size: var(--font-size-title-mobile);
+          margin-bottom: 10px; 
         }
       }
     </style>
