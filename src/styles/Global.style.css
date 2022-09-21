@@ -19,6 +19,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
+  font-family: var(--font-family-title);
   margin: 0 0 20px;
 }

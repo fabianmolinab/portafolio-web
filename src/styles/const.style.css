@@ -18,11 +18,15 @@
   --violet-color: #b48ead;
 
   /* Fonts */
-  --font-family-regular: 'Work Sans', sans-serif;
-  --font-size-title: 1.5rem;
-  --font-size-regular: 20px;
+  --font-family-regular: 'Nunito', sans-serif;
+  --font-size-regular: 22px;
   --font-weight-title: 600;
   --font-weight-regular: 400;
   --font-size-regular-mobile: 16px;
   --font-size-title-mobile: 18px; 
+
+  /* Title Styles */
+  --font-family-title: 'Space Grotesk', san-serif;
+  --font-size-title: 30px;
+
 }
