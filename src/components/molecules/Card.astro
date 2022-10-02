@@ -52,7 +52,7 @@ const {urlImg, altImg, title, urlLink, urlGit, urlName, description} =
       rgba(15, 17, 21, 0.1) 0px 5px 7px;
     margin-bottom: 40px;
     transition: box-shadow 400ms ease-in-out 0s,
-      background-color 400ms ease-in-out 0s;
+    background-color 400ms ease-in-out 0s;
   }
 
   .card_img {
@@ -87,5 +87,31 @@ const {urlImg, altImg, title, urlLink, urlGit, urlName, description} =
   .card_seccion-name:hover,
   .card_seccion-git:hover {
     font-weight: 500;
+  }
+
+  @media screen and (min-width: 360px) and (max-width: 500px) {
+    .card {
+      height: 400px;
+      margin-bottom: 20px;
+    }
+
+    .card_seccion-title {
+      margin-bottom: 0;
+    }
+
+    .card_seccion-title h3 {
+      font-size: 1rem; 
+      margin: 0 0 10px;
+    }
+
+    .card_seccion-description {
+      font-size: 18px; 
+      line-height: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card_seccion-name, .card_seccion-git {
+      font-size: 18px;
+    }
   }
 </style>

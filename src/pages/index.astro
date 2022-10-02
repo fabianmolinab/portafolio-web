@@ -33,7 +33,6 @@ import Footer from '../components/organisms/Footer.astro'
         </Paragraph>
 
         <div class='presentation_social'>
-          <div class='presentation_social-container-icon'>
             <a
               class='presentation_social-icon'
               href='https://www.github.com/fabianmolinab'
@@ -46,7 +45,6 @@ import Footer from '../components/organisms/Footer.astro'
               target='_blank'
               ><i class='fa-brands fa-linkedin fa-2x'></i>
             </a>
-          </div>
         </div>
         <Proyectos />
         <UltimosPost />
@@ -108,7 +106,8 @@ import Footer from '../components/organisms/Footer.astro'
         }
         .presentation_social {
           display: flex;
-          flex-direction: column;
+          justify-content: center;
+
         }
         .presentation_social-container-icon {
           margin-top: 20px;

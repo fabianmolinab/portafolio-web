@@ -22,11 +22,11 @@
   --font-size-regular: 22px;
   --font-weight-title: 600;
   --font-weight-regular: 400;
-  --font-size-regular-mobile: 16px;
-  --font-size-title-mobile: 18px; 
+  --font-size-regular-mobile: 19px;
 
   /* Title Styles */
   --font-family-title: 'Space Grotesk', san-serif;
   --font-size-title: 30px;
-
+  --font-size-title-mobile: 22px; 
+  --font-size-title-seccion-mobile: 25px;
 }

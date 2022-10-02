@@ -18,8 +18,8 @@ import Card from '../molecules/Card.astro'
     urlImg='https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80'
     altImg='Cat Nice'
     title='Este es el mejor proyecto que he realizado'
-    urlGit='www.github.com/fabianmolinab'
-    urlLink='www.google.com'
+    urlGit='https://www.github.com/fabianmolinab'
+    urlLink='https://www.google.com'
     urlName='Google'
     description='El gato me esta sonrriendo'
   />
@@ -32,5 +32,15 @@ import Card from '../molecules/Card.astro'
 
   .projects_title {
     margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 360px) and (max-width: 500px) {
+    .projects-seccion {
+      margin-top: 40px;
+    }
+    .projects_title {
+      font-size: var(--font-size-title-seccion-mobile);
+      margin-bottom: 20px;
+    }
   }
 </style>
