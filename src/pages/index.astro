@@ -5,8 +5,8 @@ import Paragraph from '../components/atoms/Paragraph.astro'
 
 //Seccions
 import Header from '../components/molecules/Header.astro'
-import Proyectos from '../components/organisms/Proyectos.astro'
-import UltimosPost from '../components/organisms/UltimosPost.astro'
+import Proyectos from '../components/organisms/Projects.astro'
+import UltimosPost from '../components/organisms/LastPost.astro'
 import Footer from '../components/organisms/Footer.astro'
 ---
 
@@ -26,25 +26,23 @@ import Footer from '../components/organisms/Footer.astro'
         </h1>
         <Paragraph>
           <p>
-            Desarrollador de Software & Ingeniero Geologo. Este es mi
-            blog/portafolio donde trato temas diversos enfocados a Desarrollo
-            Web y Tecnología. ¡Bienvenido!
+            Desarrollador de Software, es mi blog/portafolio donde trato temas diversos enfocados a programación. ¡Bienvenido!
           </p>
         </Paragraph>
 
         <div class='presentation_social'>
-            <a
-              class='presentation_social-icon'
-              href='https://www.github.com/fabianmolinab'
-              target='_blank'
-              ><i class='fa-brands fa-github fa-2x'></i>
-            </a>
-            <a
-              class='presentation_social-icon'
-              href='https://www.linkedin.com/in/fabianmolinab/'
-              target='_blank'
-              ><i class='fa-brands fa-linkedin fa-2x'></i>
-            </a>
+          <a
+            class='presentation_social-icon'
+            href='https://www.github.com/fabianmolinab'
+            target='_blank'
+            ><i class='fa-brands fa-github fa-2x'></i>
+          </a>
+          <a
+            class='presentation_social-icon'
+            href='https://www.linkedin.com/in/fabianmolinab/'
+            target='_blank'
+            ><i class='fa-brands fa-linkedin fa-2x'></i>
+          </a>
         </div>
         <Proyectos />
         <UltimosPost />
@@ -107,7 +105,6 @@ import Footer from '../components/organisms/Footer.astro'
         .presentation_social {
           display: flex;
           justify-content: center;
-
         }
         .presentation_social-container-icon {
           margin-top: 20px;
