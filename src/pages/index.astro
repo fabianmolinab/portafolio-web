@@ -1,4 +1,6 @@
 ---
+//Icons
+import {TbBrandGithub, TbBrandLinkedin} from "react-icons/tb"
 // Componentes
 import Head from '../components/Head.astro'
 import Paragraph from '../components/atoms/Paragraph.astro'
@@ -32,16 +34,18 @@ import Footer from '../components/organisms/Footer.astro'
 
         <div class='presentation_social'>
           <a
-            class='presentation_social-icon'
+            class='presentation_social-icon-github'
             href='https://www.github.com/fabianmolinab'
             target='_blank'
-            ><i class='fa-brands fa-github fa-2x'></i>
+            >
+            <TbBrandGithub/>
           </a>
           <a
-            class='presentation_social-icon'
+            class='presentation_social-icon-linkedin'
             href='https://www.linkedin.com/in/fabianmolinab/'
             target='_blank'
-            ><i class='fa-brands fa-linkedin fa-2x'></i>
+            >
+            <TbBrandLinkedin/>
           </a>
         </div>
         <Proyectos />
@@ -49,6 +53,7 @@ import Footer from '../components/organisms/Footer.astro'
         <Footer client:visible />
       </div>
     </main>
+
     <style>
       .presentation_container {
         margin-top: calc(91px + 1rem);
@@ -73,23 +78,24 @@ import Footer from '../components/organisms/Footer.astro'
       .presentation_social {
         display: flex;
         align-items: center;
-        height: 40px;
         margin-top: 20px;
       }
-
-      .presentation_social-icon {
-        cursor: pointer;
-        color: transparent;
-      }
-
-      .fa-brands {
-        color: var(--white-color);
-        margin-right: 10px;
-      }
-
-      .fa-brands:hover {
+      .presentation_social a:hover {
         color: var(--violet-color);
         transition: 0.3s;
+      }
+
+      .presentation_social-icon-github {
+        cursor: pointer;
+        color: var(--white-color);
+        margin-right: 10px;
+        font-size: 1.6rem;
+      }
+
+      .presentation_social-icon-linkedin {
+        cursor: pointer;
+        color: var(--white-color);
+        font-size: 1.7rem;
       }
 
       @media screen and (min-width: 360px) and (max-width: 500px) {
