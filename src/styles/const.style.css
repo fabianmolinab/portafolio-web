@@ -1,6 +1,6 @@
 :root {
   /* Size */
-  --size-mobileS: 400px;
+  --size-mobile-s: 320px;
 
   /* Colors */
   --background-color-dark: #2e3440;
@@ -18,9 +18,15 @@
   --violet-color: #b48ead;
 
   /* Fonts */
-  --font-family-regular: 'IBM Plex Mono', monospace;
-  --font-size-title: 1.5rem;
-  --font-size-regular: 20px;
+  --font-family-regular: 'Nunito', sans-serif;
+  --font-size-regular: 22px;
   --font-weight-title: 600;
   --font-weight-regular: 400;
+  --font-size-regular-mobile: 19px;
+
+  /* Title Styles */
+  --font-family-title: 'Space Grotesk', san-serif;
+  --font-size-title: 30px;
+  --font-size-title-mobile: 22px; 
+  --font-size-title-seccion-mobile: 25px;
 }

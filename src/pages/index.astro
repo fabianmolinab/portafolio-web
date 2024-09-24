@@ -1,15 +1,15 @@
 ---
+//Icons
+import {TbBrandGithub, TbBrandLinkedin} from "react-icons/tb"
 // Componentes
 import Head from '../components/Head.astro'
-import Strong from '../components/atoms/Strong.astro'
 import Paragraph from '../components/atoms/Paragraph.astro'
 
 //Seccions
 import Header from '../components/molecules/Header.astro'
-import Proyectos from '../components/organisms/Proyectos.astro'
-import UltimosPost from '../components/organisms/UltimosPost.astro'
+import Proyectos from '../components/organisms/Projects.astro'
+import UltimosPost from '../components/organisms/LastPost.astro'
 import Footer from '../components/organisms/Footer.astro'
-
 ---
 
 <!DOCTYPE html>
@@ -28,32 +28,32 @@ import Footer from '../components/organisms/Footer.astro'
         </h1>
         <Paragraph>
           <p>
-            Desarrollador de Software & Ingeniero Geologo. Este es mi
-            blog/portafolio donde trato temas diversos enfocados a Desarrollo
-            Web y Tecnología. ¡Bienvenido!
+            Desarrollador de Software, es mi blog/portafolio donde trato temas diversos enfocados a programación. ¡Bienvenido!
           </p>
         </Paragraph>
 
         <div class='presentation_social'>
-          <Strong content='Contactame =>' />
           <a
-            class='presentation_social-icon'
+            class='presentation_social-icon-github'
             href='https://www.github.com/fabianmolinab'
             target='_blank'
-            ><i class='fa-brands fa-github fa-2x'></i>
+            >
+            <TbBrandGithub/>
           </a>
           <a
-            class='presentation_social-icon'
+            class='presentation_social-icon-linkedin'
             href='https://www.linkedin.com/in/fabianmolinab/'
             target='_blank'
-            ><i class='fa-brands fa-linkedin fa-2x'></i>
+            >
+            <TbBrandLinkedin/>
           </a>
         </div>
         <Proyectos />
         <UltimosPost />
-        <Footer/>
+        <Footer client:visible />
       </div>
     </main>
+
     <style>
       .presentation_container {
         margin-top: calc(91px + 1rem);
@@ -78,33 +78,42 @@ import Footer from '../components/organisms/Footer.astro'
       .presentation_social {
         display: flex;
         align-items: center;
-        height: 40px;
         margin-top: 20px;
       }
-
-      .presentation_social-icon {
-        cursor: pointer;
-        color: transparent;
-      }
-
-      .fa-brands {
-        color: var(--white-color);
-        margin-right: 10px;
-      }
-
-      .fa-brands:hover {
+      .presentation_social a:hover {
         color: var(--violet-color);
         transition: 0.3s;
       }
 
-      @media screen and (min-width: 370px) and (max-width: 500px) {
+      .presentation_social-icon-github {
+        cursor: pointer;
+        color: var(--white-color);
+        margin-right: 10px;
+        font-size: 1.6rem;
+      }
+
+      .presentation_social-icon-linkedin {
+        cursor: pointer;
+        color: var(--white-color);
+        font-size: 1.7rem;
+      }
+
+      @media screen and (min-width: 360px) and (max-width: 500px) {
         .presentation_container {
-          margin-top: calc(41px + 3rem);
+          margin-top: calc(41px + 2rem);
           padding: 0 20px;
         }
 
         .presentation_title {
-          font-size: 1.2rem;
+          font-size: var(--font-size-title-mobile);
+          margin-bottom: 10px;
+        }
+        .presentation_social {
+          display: flex;
+          justify-content: center;
+        }
+        .presentation_social-container-icon {
+          margin-top: 20px;
         }
       }
     </style>
